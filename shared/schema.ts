@@ -48,7 +48,7 @@ export const projects = pgTable("projects", {
   systemSize: integer("system_size").notNull(), // in kW
   totalFunding: decimal("total_funding", { precision: 10, scale: 2 }).notNull(),
   currentFunding: decimal("current_funding", { precision: 10, scale: 2 }).default("0"),
-  expectedReturn: decimal("expected_return", { precision: 5, scale 2 }).notNull(), // APR percentage
+  expectedReturn: decimal("expected_return", { precision: 5, scale: 2 }).notNull(), // APR percentage
   minInvestment: decimal("min_investment", { precision: 10, scale: 2 }).notNull(),
   status: varchar("status", { 
     enum: ["pending", "approved", "funding", "active", "completed", "cancelled"] 
